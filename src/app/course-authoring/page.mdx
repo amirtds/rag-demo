@@ -1,0 +1,51 @@
+export const metadata = {
+  title: 'Editor',
+  description:
+    'In this section we see how the editor can access data and provide a way to edit/update and refine the content',
+}
+
+# Course Authoring Tool
+
+In this section we see how we can integrate the model with a course authoring tool, to generate, update and refine the content and export it as OLX.
+
+## API call to embed content
+
+Imagine we create a video lecture on YouTube about `Python if-else stetements`. Now we want to creat a short Open edX course using that video.
+
+Let’s enter the video link in the input element of the Editor and click on Create Course:
+
+<img src="https://github.com/amirtds/openedx-articles/raw/main/%20ai-driven_course_creation/assets/editor_1.png" />
+
+## API call to generate course content
+
+After clicking on the button, the editor makes a call to the model’s API and it retrieves the generated content and loads it to the editor.
+
+<img src="https://github.com/amirtds/openedx-articles/raw/main/%20ai-driven_course_creation/assets/editor_2.png" />
+
+We should see something like the following in the editor.
+
+<img src="https://github.com/amirtds/openedx-articles/raw/main/%20ai-driven_course_creation/assets/editor_with_data.gif" />
+
+Now, Let’s fine-tune and enhance our content in the editor, and when we are done click on Export OLX
+
+<img src="https://github.com/amirtds/openedx-articles/raw/main/%20ai-driven_course_creation/assets/editor_enhancing.gif" />
+
+## Export content as OLX
+
+Now lets click on `Export OLX`, If our content structure is a valid OLX, the file gets downloaded.
+
+In this example I only added some stylings and a new component Python Code ExecuterOpens a link in a new tab to our course. Remember, this is just a starting point. The essence of a truly successful course lies in the personalized touch you bring to it. AI may lay the foundation, but it’s the insight and expertise of an instructional designer that transform this base into a successful learning experience.
+
+Importing the Course into the Open edX LMS
+Now let’s go to our course in the Open edX Platform and navigate to the /import/course-v1:TLA+PY106+2024_Q1 URL and Click on Choose a File to Import to pick and import the file downloaded in the previous step
+
+<img src="https://github.com/amirtds/openedx-articles/raw/main/%20ai-driven_course_creation/assets/course_import_1.png" />
+
+<img src="https://github.com/amirtds/openedx-articles/raw/main/%20ai-driven_course_creation/assets/course_import_2.png" />
+<img src="https://github.com/amirtds/openedx-articles/raw/main/%20ai-driven_course_creation/assets/course_import_3.png" />
+
+Confirm the Course Structure
+Now let’s navigate to LMS to confirm our course looks as expected
+
+<img src="https://github.com/amirtds/openedx-articles/raw/main/%20ai-driven_course_creation/assets/result.gif" />
+As you can see we could successfully import our course to the Open edX Platform
